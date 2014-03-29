@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -35,6 +35,10 @@ end
 gem 'therubyracer'
 gem 'execjs'
 # for ubuntu java runtime
+
+gem 'pry'
+gem 'annotate'
+gem 'bcrypt-ruby'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
