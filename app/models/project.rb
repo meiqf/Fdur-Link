@@ -9,12 +9,8 @@
 #  updated_at :datetime
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+class Project < ActiveRecord::Base
+  belongs_to :user
 
-one:
-  content: MyString
-  user_id: 1
-
-two:
-  content: MyString
-  user_id: 1
+  validates :content, length: {:maximum => 140}
+end
