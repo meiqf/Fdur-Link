@@ -19,5 +19,7 @@ module FdurLink
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.secret_key_base = "scott-------------1743!@$%^&*()"
+    config.secret_token = '5e262de6c63308276a05ae64b5b5c7948c2e7fa70d33fe0a7a6c8372d937743722e16d28dab20cac407cf841e4f2e4ee65fc33890763cecf7c0adc697b17d644'
   end
 end
