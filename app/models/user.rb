@@ -13,7 +13,8 @@
 
 class User < ActiveRecord::Base
   has_many :projects
-
+  belongs_to :permission
+  
   before_save {self.email.downcase!}
   before_save :create_remember_token
 

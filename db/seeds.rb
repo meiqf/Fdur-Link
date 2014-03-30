@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+if Permission.first.nil?
+ Permission.create(name: 'normal')
+ Permission.create(name: 'admin')
+end
+
+if User.first.nil?
+end
