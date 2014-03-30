@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :check_signed_in
+  before_action :check_signed_in ,except: [:new, :create]
 
   def index
     @users = User.all
@@ -10,13 +10,16 @@ class UsersController < ApplicationController
   end
 
   def new
+    user_detail = UserDetail.new
     @user = User.new
+    @user.user_detail = user_detail
   end
 
   def edit
   end
 
   def create
+    binding.pry
     @user = User.new(user_params)
     if @user.save
       flash.now[:success] = "welcome to the Fdur"
@@ -47,6 +50,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email,:password,:password_confirmation)
+      params_hash = params.require(:user).permit(:email,:password,:password_confirmation,:user_detail_attributes)
     end
 end

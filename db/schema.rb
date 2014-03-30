@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140330043403) do
+ActiveRecord::Schema.define(version: 20140330093852) do
 
   create_table "permissions", force: true do |t|
     t.string   "name"
@@ -27,8 +27,19 @@ ActiveRecord::Schema.define(version: 20140330043403) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "user_details", force: true do |t|
     t.string   "name"
+    t.text     "description"
+    t.string   "avatar"
+    t.string   "qqnumber"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_details", ["user_id"], name: "index_user_details_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
