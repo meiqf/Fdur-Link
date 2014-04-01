@@ -10,22 +10,20 @@ class UsersController < ApplicationController
   end
 
   def new
-    user_detail = UserDetail.new
     @user = User.new
-    @user.user_detail = user_detail
   end
 
   def edit
   end
 
   def create
-    binding.pry
     @user = User.new(user_params)
     if @user.save
       flash.now[:success] = "welcome to the Fdur"
       redirect_to @user, notice: 'Welcome To The Fdur' 
     else
-      render action: 'new'
+      flash.now[:error] = 'Invalid email/password combination'
+      render action: :new
     end
   end
 
@@ -34,7 +32,7 @@ class UsersController < ApplicationController
       flash.now[:success] = 'User was successfully updated.'
       redirect_to @user, notice: 'User was successfully updated.'
     else
-      render action: 'edit'
+      render action: :edit
     end
   end
 
