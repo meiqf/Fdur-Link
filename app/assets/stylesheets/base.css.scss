@@ -1,0 +1,40 @@
+
+body, div, pre, form, blockquote,
+dl, dt, dd,
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+body, html{height: 100%;height: 100%}
+a {cursor: pointer}
+div {display: block}
+body, input, select, textarea, a, div,{
+  font-family: "MICROSOFT YAHEI", Helvetica, Arial, Sans-serif;
+  font-size: 15px;
+  color: #130c0e
+}
+
+.base_button {
+  border: none;
+  background-color:#44c767;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:8px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:15px;
+  padding:7px 20px;
+  text-decoration:none;
+  outline: none;
+  font-weight: bold;
+}
+.base_button:hover {
+  border-bottom:1px solid #18ab29;
+  position:relative;
+  top:-1px;
+
+}
+.base_button:active {
+  border: none;
+  position:relative;
+  top:1px;
+}

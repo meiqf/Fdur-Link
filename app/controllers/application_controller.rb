@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
 def check_signed_in
   if signed_in?
-    redirect_to user_projects_path(current_user)
+    nil
   else
     flash[:error] = "Please singin first!"
     redirect_to signin_path

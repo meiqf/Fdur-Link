@@ -1,3 +1,21 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{background-color: #000;overflow-y:hidden;}
+.welcome_main{position: absolute;top: 150px;display: block;width: 100%;height:446px;z-index: 99999}
+.welcome_flame{ display: block;margin:0 auto;width: 1000px;height: 446px}
+.welcome_tip{display: none;float:left;margin-top: 190px; width: 600px;height: 120px}
+.welcome_signin{display:none;float: right;width: 308px;height: 130px;padding:12px 20px;background-color: #EBEBEB;border-radius:8px}
+.welcome_signup{display: none; float: right;width: 308px;height: 218px;padding:12px 20px;margin-top: 18px; background-color: #EBEBEB;clear:right;border-radius:8px}
+.welcome_sign_input{float:left;width: 288px;height: 30px;margin-top: 12px;border:1px inset #E5E5E5; border-radius:6px;color:#666; font-size:15px;outline: none;padding-left: 12px }
+.welcome_signin_button{width: 208px}
+[dataflag='welcome_real_input'] {display: none}
+.welcome_sign_border{height: 34px;border-bottom: 1px solid #ccc;font-size: 18px;}
+#bg_img_second{display:none;width:100%;height:100%;margin:0;}
+.button_sign_in{
+  float: left;
+  margin: 12px 0 0 8px;
+}
+.button_register{
+  float: right;
+  margin: 12px 8px 0 0;
+}
+
