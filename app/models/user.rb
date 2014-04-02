@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
   has_many :projects
   belongs_to :permission, dependent: :destroy
   has_one :user_detail, dependent: :destroy
-  accepts_nested_attributes_for :user_detail
   
   before_save {self.email.downcase!}
   before_save :create_remember_token
@@ -28,14 +27,6 @@ class User < ActiveRecord::Base
   
   def name
     self.user_detail.nil? ? nil : self.user_detail.name
-  end
-
-  def description
-    self.user_detail.nil? ? nil : self.user_detail.description
-  end
-
-  def qqmumber
-    self.user_detail.nil? ? nil : self.user_details.qqnumber  
   end
 
   private
